@@ -11,5 +11,6 @@ ENV VIRTUAL_HOST=${VIRTUAL_HOST} \
 
 
 ## EXPOSE [Port you mentioned in the vite.config file]
-EXPOSE 5173
+EXPOSE 80
+
 CMD ["npm", "run", "dev"]
