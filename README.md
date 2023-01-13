@@ -22,7 +22,7 @@ docker run -d --rm -it --name rails --env-file ./rails/.env -v app-storage:/rail
 # Vue
 ```shell
 docker build -t secondary secondary/.
-docker run -d --name vite --env ./secondary/.env --network everything_app secondary
+docker run -d --rm --name vite --env ./secondary/.env --network everything_app secondary
 
 ```
 # Postgres
