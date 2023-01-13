@@ -6,6 +6,6 @@ ENV POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
 COPY ./postgres-data /var/lib/postgresql/data
 
-EXPOSE 5432
+EXPOSE 80
 
 CMD ["postgres"]
