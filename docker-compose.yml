@@ -44,7 +44,6 @@ volumes:
   vhost: {}
   dhparam: {}
   certs: {}
-  nginx: {}
 
 
 networks:
