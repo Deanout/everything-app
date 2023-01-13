@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true, // needed for the Docker Container port mapping to work
-    port: 80, // you can replace this port with any port
+    port: 8080, // you can replace this port with any port
   },
 });
