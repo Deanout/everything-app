@@ -4,7 +4,6 @@ services:
         image: "jwilder/nginx-proxy:latest"
         container_name: "nginx-proxy"
         volumes:
-            - "./nginx:/etc/nginx/conf.d"
             - "html:/usr/share/nginx/html"
             - "dhparam:/etc/nginx/dhparam"
             - "vhost:/etc/nginx/vhost.d"

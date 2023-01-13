@@ -16,13 +16,13 @@ docker-compose start
 ```shell
 docker build -t app ./rails/.
 docker volume create app-storage
-docker run -d --rm -it --env-file ./rails/.env -v app-storage:/rails/storage --network everything_app app
+docker run -d --rm -it --name rails --env-file ./rails/.env -v app-storage:/rails/storage --network everything_app app
 ```
 
 # Vue
 ```shell
 docker build -t secondary secondary/.
-docker run -d --network everything_app secondary
+docker run -d --name vite --env ./secondary/.env --network everything_app secondary
 
 ```
 # Postgres
