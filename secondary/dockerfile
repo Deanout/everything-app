@@ -4,11 +4,6 @@ COPY package.json .
 RUN npm i
 COPY . .
 
-ENV VIRTUAL_HOST=${VIRTUAL_HOST} \
-    LETSENCRYPT_HOST=${LETSENCRYPT_HOST} \
-    LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL} \
-    VIRTUAL_PORT=${VITE_PORT}
-
 
 ## EXPOSE [Port you mentioned in the vite.config file]
 EXPOSE 80
