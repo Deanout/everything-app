@@ -9,6 +9,6 @@ COPY . .
 RUN npm run build
 
 ## EXPOSE [Port you mentioned in the vite.config file]
-EXPOSE 8080
+EXPOSE 8080:8080
 # Run preview with vite config
 CMD ["npm", "run", "preview", "--", "--config", "vite.config.js"]
