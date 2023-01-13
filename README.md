@@ -1,5 +1,8 @@
 # README
 
+# Docker Network
+docker network create everything_app
+
 # NGINX+LetsEncrypt
 ```shell
 docker-compose build
@@ -11,9 +14,9 @@ docker-compose start
 
 # Rails
 ```shell
-docker build -t app .
+docker build -t app ./rails/.
 docker volume create app-storage
-docker run -d --rm -it --env-file .env -v app-storage:/rails/storage --network demo_default app
+docker run -d --rm -it --env-file ./rails/.env -v app-storage:/rails/storage --network everything_app app
 ```
 
 # Vue
@@ -24,6 +27,6 @@ docker run -d --network demo_default secondary
 ```
 # Postgres
 ```shell
-cd psql
+mkdir psql/postgres-data
 docker build -t psql ./psql/.
-docker run -d --name postgres --env-file ./psql/.env -v postgres-data:/var/lib/postgresql/data --network demo_default psql
+docker run -d --name postgres --env-file ./psql/.env -v postgres-data:/var/lib/postgresql/data --network everything_app psql
