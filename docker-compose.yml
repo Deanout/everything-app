@@ -49,3 +49,4 @@ volumes:
 networks:
   everything_app:
     name: everything_app
+    external: true
